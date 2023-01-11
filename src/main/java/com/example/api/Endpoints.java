@@ -38,16 +38,16 @@ public class Endpoints {
             @RequestBody FooDto dto
     ){
         //not checking  any constraint
-        //#3,#4,#5: 3 different constraints on data
+        //#4,#5,#6: 3 different constraints on data
 
-        //#6: location header leading to 404
+        //#7: location header leading to 404
         return ResponseEntity.created(URI.create("/api/doesNotExist")).build();
     }
 
     @DeleteMapping("/y")
     public void deleteY(){
         //do nothing
-        //#7 GET would still return data
+        //#8 GET would still return data
     }
 
     @PutMapping(value = "/k", consumes = MediaType.APPLICATION_JSON_VALUE)
