@@ -27,7 +27,7 @@ public class Endpoints {
         FooDto dto = new FooDto();
         dto.i = 42;
         dto.s = "FOO";
-        dto.b = null; //#2 required in schema
+        dto.b = null; //#2 null is not valid type for boolean
 
         //#3 schema gives different status code
         return ResponseEntity.status(201).body(dto);
